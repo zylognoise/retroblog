@@ -1,0 +1,122 @@
+/* ===============================
+   RESET IMPRESIÓN
+================================ */
+* {
+  background: none !important;
+  box-shadow: none !important;
+  animation: none !important;
+}
+
+/* ===============================
+   CUERPO
+================================ */
+body {
+  color: #000;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+}
+
+/* ===============================
+   OCULTAR INTERFAZ
+================================ */
+header,
+nav,
+#filters,
+.tags,
+.clear-filter,
+.minimal-switch,
+.back {
+  display: none !important;
+}
+
+/* ===============================
+   CONTENIDO
+================================ */
+main {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* ===============================
+   POST
+================================ */
+.post {
+  text-align: center;
+  page-break-inside: avoid;
+}
+
+.post h2 {
+  font-size: 18pt;
+  letter-spacing: 3px;
+}
+
+.meta {
+  font-size: 9pt;
+  margin-bottom: 20px;
+}
+
+.post p {
+  font-size: 11pt;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+
+/* ===============================
+   IMÁGENES
+================================ */
+.cover {
+  max-width: 60%;
+  margin: 20px auto;
+  display: block;
+  filter: grayscale(100%);
+}
+
+/* ===============================
+   PAGINADO
+================================ */
+article {
+  page-break-after: always;
+}
+
+/* ===============================
+   SOLO TEXTO
+================================ */
+body.text-only .cover,
+body.text-only img {
+  display: none !important;
+}
+
+body.text-only .post p {
+  font-size: 12pt;
+  line-height: 1.8;
+}
+
+/* ===============================
+   ENCABEZADO REVISTA
+================================ */
+@page {
+  size: A4;
+  margin: 2cm;
+
+  @top-center {
+    content: "FANZINE · RESEÑAS";
+    font-size: 8pt;
+    letter-spacing: 2px;
+  }
+
+  @top-left {
+    content: "p." counter(page);
+    font-size: 8pt;
+  }
+
+  @top-right {
+    content: "archivo independiente · sin algoritmo";
+    font-size: 7pt;
+  }
+}
+
+.page,
+main,
+.post {
+  border: none !important;
+}
